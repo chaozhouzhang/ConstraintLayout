@@ -48,6 +48,8 @@ import android.view.View
  * androidx.constraintlayout.widget.Barrier
  * barrierDirection
  * constraint_referenced_ids
+ * barrierMargin
+ * barrierAllowsGoneWidgets
  *
  *
  *
@@ -56,32 +58,68 @@ import android.view.View
  * layout_constraintVertical_bias
  *
  *
- * 调整视图尺寸：
+ * 比例：
+ * layout_constraintDimensionRatio
+ * h,1:2
+ * W,1:2
  *
- * MATH_CONSTRAINT
- * app:layout_constraintWidth_default
+ *
+ * 边距：
+ * layout_goneMarginStart
+ * layout_goneMarginBottom
+ * layout_goneMarginEnd
+ * layout_goneMarginLeft
+ * layout_goneMarginRight
+ * layout_goneMarginTop
+ *
+ *
+ * layout_constraintHorizontal_chainStyle
+ * layout_constraintVertical_chainStyle
  * spread
- * wrap
- * percent
- * app:layout_constraintHeight_default
+ * spread_inside
+ * packed
+ * layout_constraintHorizontal_weight
+ * layout_constraintVertical_weight
+ * 0dp
+ *
+ *
+ * layout_constraintCircle
+ * layout_constraintCircleAngle
+ * layout_constraintCircleRadius
+ *
+ *
+ * minWidth
+ * minHeight
+ * maxWidth
+ * maxHeight
+ *
+ *
+ * dimension:
+ * fixed
+ *
+ * wrap_content
+ * layout_constrainedWidth
+ * layout_constrainedHeight
+ *
+ * 0dp match_constraint
  * layout_constraintWidth_min
  * layout_constraintHeight_min
  * layout_constraintWidth_max
  * layout_constraintHeight_max
  * layout_constraintWidth_percent
  * layout_constraintHeight_percent
+ * layout_constraintWidth_default
+ * layout_constraintHeight_default
+ * spread
+ * wrap
+ * percent
  *
- *
- * layout_constraintDimensionRatio
- * h,1:2
- * W,1:2
- *
+ * match_parent，不推荐在约束布局下使用
  *
  *
  */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }

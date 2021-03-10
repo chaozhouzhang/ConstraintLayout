@@ -57,5 +57,84 @@
 
         </Button>
 
+        <Button
+            android:id="@+id/btn_chain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="baseline"
+            android:text="链约束"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_bias"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_baseline">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_bias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="guideline"
+            android:text="约束偏差"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@id/btn_barrier"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/btn_baseline"
+            app:layout_constraintTop_toBottomOf="@id/btn_baseline">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/btn_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="barrier"
+            android:text="边距"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/btn_guideline"
+            app:layout_constraintTop_toBottomOf="@id/btn_baseline">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_ratio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="barrier"
+            android:text="尺寸比例"
+            android:textColor="@android:color/white"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_chain">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_dimension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="barrier"
+            android:text="尺寸约束"
+            android:textColor="@android:color/white"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/btn_ratio"
+            app:layout_constraintTop_toBottomOf="@id/btn_chain">
+
+        </Button>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

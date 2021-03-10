@@ -9,7 +9,10 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="此控件的尺寸大小为固定大小 Fixed"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
+        android:text="固定大小 Fixed 350dp"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,10 +25,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="此控件的尺寸大小为跟随内容包裹大小 wrap_content"
+        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp"
+        android:text="内容包裹大小 wrap_content"
+        android:textColor="@android:color/white"
         app:layout_constraintTop_toBottomOf="@id/btn_fixed">
+
+    </Button>
+
+
+    <Button
+        android:id="@+id/btn_constraint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
+        android:text="约束 MATCH_CONSTRAINT 0dp 下 margin 无效"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_wrap_content">
 
     </Button>
 
@@ -34,12 +56,14 @@
         android:id="@+id/btn_match_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintWidth_default="percent"
-        android:text="此控件的尺寸大小为父布局大小 match_parent"
+        android:layout_margin="16dp"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
+        android:text="MATCH_PARENT下 margin 有效"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_wrap_content">
+        app:layout_constraintTop_toBottomOf="@id/btn_constraint">
 
     </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>
