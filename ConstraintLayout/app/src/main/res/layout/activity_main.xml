@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_baseline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="基线约束"
+            android:background="@color/colorPrimary"
+            android:onClick="baseline"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="引导线约束"
+            android:onClick="guideline"
+            app:layout_constraintEnd_toStartOf="@id/btn_barrier"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/btn_baseline"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/btn_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:onClick="barrier"
+            android:textColor="@android:color/white"
+            android:text="屏障约束"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/btn_guideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

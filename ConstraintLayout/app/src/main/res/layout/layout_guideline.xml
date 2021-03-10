@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--竖直方向-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp">
+
+
+    </androidx.constraintlayout.widget.Guideline>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp">
+
+
+    </androidx.constraintlayout.widget.Guideline>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_vertical_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4">
+
+
+    </androidx.constraintlayout.widget.Guideline>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:text="竖直方向\n begin"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/guide_line_vertical_begin">
+
+    </Button>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:text="竖直方向\n end"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_vertical_end">
+
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:text="竖直方向\n percent"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/guide_line_vertical_percent">
+
+    </Button>
+
+
+    <!--水平方向-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp">
+
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp">
+
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_horizontal_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3">
+
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="水平方向 begin"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/guide_line_horizontal_begin">
+
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="水平方向 end"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/guide_line_horizontal_end">
+
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="水平方向 percent"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/guide_line_horizontal_percent">
+
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
