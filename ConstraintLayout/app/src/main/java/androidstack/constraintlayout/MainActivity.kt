@@ -174,5 +174,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun placeholder(view: View) {
-        gotoSample(R.layout.layout_placeholder)}
+        gotoSample(R.layout.layout_placeholder)
+    }
+
+    fun space(view: View) {
+        gotoSample(R.layout.layout_space)
+    }
 }

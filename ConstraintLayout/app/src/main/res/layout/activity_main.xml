@@ -161,5 +161,21 @@
             app:layout_constraintTop_toBottomOf="@id/btn_ratio">
 
         </Button>
+
+
+        <Button
+            android:id="@+id/btn_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="space"
+            android:text="SPACE"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_placeholder"
+            app:layout_constraintTop_toBottomOf="@id/btn_ratio">
+
+        </Button>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
