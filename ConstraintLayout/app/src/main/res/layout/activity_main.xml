@@ -19,7 +19,6 @@
             android:background="@color/colorPrimary"
             android:onClick="baseline"
             android:textColor="@android:color/white"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -35,7 +34,6 @@
             android:text="引导线约束"
             android:onClick="guideline"
             app:layout_constraintEnd_toStartOf="@id/btn_barrier"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@id/btn_baseline"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -51,7 +49,6 @@
             android:textColor="@android:color/white"
             android:text="屏障约束"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@id/btn_guideline"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -63,10 +60,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
-            android:onClick="baseline"
+            android:onClick="chain"
             android:text="链约束"
             android:textColor="@android:color/white"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_bias"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_baseline">
@@ -79,11 +75,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
-            android:onClick="guideline"
+            android:onClick="bias"
             android:text="约束偏差"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toStartOf="@id/btn_barrier"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@id/btn_baseline"
             app:layout_constraintTop_toBottomOf="@id/btn_baseline">
 
@@ -96,11 +91,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
-            android:onClick="barrier"
+            android:onClick="margin"
             android:text="边距"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@id/btn_guideline"
             app:layout_constraintTop_toBottomOf="@id/btn_baseline">
 
@@ -112,28 +106,59 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
-            android:onClick="barrier"
+            android:onClick="ratio"
             android:text="尺寸比例"
             android:textColor="@android:color/white"
-            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintEnd_toStartOf="@id/btn_dimension"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_chain">
 
         </Button>
 
+
         <Button
             android:id="@+id/btn_dimension"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
-            android:onClick="barrier"
+            android:onClick="dimension"
             android:text="尺寸约束"
             android:textColor="@android:color/white"
-            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintEnd_toStartOf="@id/btn_group"
             app:layout_constraintStart_toEndOf="@id/btn_ratio"
             app:layout_constraintTop_toBottomOf="@id/btn_chain">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/btn_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="group"
+            android:text="群组"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_dimension"
+            app:layout_constraintTop_toBottomOf="@id/btn_chain">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:onClick="placeholder"
+            android:text="占位"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@id/btn_dimension"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ratio">
 
         </Button>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,9 @@
 package androidstack.constraintlayout
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
 
 /**
@@ -117,6 +118,12 @@ import android.view.View
  * match_parent，不推荐在约束布局下使用
  *
  *
+ * Group
+ * Group可以很方便的让我们处理一组View的隐藏与显示的状态，但是只要View处于这个Group中，那么单独再对其进行视图状态的控制就失效了！
+ *
+ * placeholder 预留控件位置占位用
+ * 代码中可以动态加载控件到placeholder中
+ * constraint_referenced_ids
  */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -124,9 +131,48 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun baseline(view: View) {
-
+    private fun gotoSample(layout: Int) {
+        val intent = Intent(this, SampleActivity::class.java)
+        intent.putExtra("layout", layout)
+        startActivity(intent)
     }
-    fun guideline(view: View) {}
-    fun barrier(view: View) {}
+
+    fun baseline(view: View) {
+        gotoSample(R.layout.layout_baseline)
+    }
+
+    fun guideline(view: View) {
+        gotoSample(R.layout.layout_guideline)
+    }
+
+    fun barrier(view: View) {
+        gotoSample(R.layout.layout_barrier)
+    }
+
+    fun chain(view: View) {
+        gotoSample(R.layout.layout_chain)
+    }
+
+    fun bias(view: View) {
+        gotoSample(R.layout.layout_bias)
+    }
+
+    fun margin(view: View) {
+        gotoSample(R.layout.layout_margin)
+    }
+
+    fun ratio(view: View) {
+        gotoSample(R.layout.layout_ratio)
+    }
+
+    fun dimension(view: View) {
+        gotoSample(R.layout.layout_dimension)
+    }
+
+    fun group(view: View) {
+        gotoSample(R.layout.layout_group)
+    }
+
+    fun placeholder(view: View) {
+        gotoSample(R.layout.layout_placeholder)}
 }
